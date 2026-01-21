@@ -875,24 +875,16 @@
     }
 
     /* ================= SUMMARY PAGE STYLES ================= */
-    .summary-container {
-      display: flex;
-      max-width: 1200px;
-      margin: 40px auto;
-      gap: 40px;
-      padding: 20px;
-    }
+   
 
-    .summary-main {
-      flex: 2;
-    }
 
     .summary-sidebar {
-      flex: 1;
+      flex: 0.5;
       background-color: #f0fafa;
       /* Matches the light teal in the image */
-      padding: 30px;
+      padding: 40px;
       border-radius: 4px;
+      
     }
 
     .summary-header {
@@ -1380,7 +1372,7 @@
       Before you start
     </h2>
     <div style="
-          font-size: 14px;
+          font-size: 17px;
           line-height: 1.8;
           color: #333;
           background: #f9f9f9;
@@ -2335,7 +2327,7 @@
 
         const formatter = new Intl.NumberFormat("en-US", {
           style: "currency",
-          currency: "USD",
+          currency: "Pkr",
           maximumFractionDigits: 0,
         });
 
