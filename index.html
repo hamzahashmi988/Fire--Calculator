@@ -1,1036 +1,1080 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retire Right – Al Meezan</title>
 
-    <style>
-      :root {
-        --purple: #70297d;
-        --light-purple: #efd1f7;
-        --teal: #cfe3e3;
-        --text-dark: #111;
-        --text-gray: #555;
-        --card-pink: #f9e2f5;
-        --card-orange: #ffedd5;
-        --al-dark: #2d054a;
-        --al-accent: #9d26b0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retire Right – Al Meezan</title>
+
+  <style>
+    :root {
+      --purple: #70297d;
+      --light-purple: #efd1f7;
+      --teal: #cfe3e3;
+      --text-dark: #111;
+      --text-gray: #555;
+      --card-pink: #f9e2f5;
+      --card-orange: #ffedd5;
+      --al-dark: #2d054a;
+      --al-accent: #9d26b0;
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "poppins", sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      color: var(--text-dark);
+    }
+
+    /* ================= NAVBAR ================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "poppins", sans-serif;
+    }
+
+    body {
+      font-size: 14px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    header {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #eae7ee;
+      padding: 5px 20px;
+      font-size: 13px;
+    }
+
+    .top-bar a {
+      margin-left: 20px;
+      color: #070101;
+    }
+
+    .top-bar span {
+      margin-left: 10px;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      font-family: "poppins";
+    }
+
+    .logo img {
+      height: 100px;
+    }
+
+    .logo2 img {
+      height: 100px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-family: "poppins";
       
+    }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Segoe UI", Arial, sans-serif;
-      }
+    .nav-links a {
+      font-weight: 100;
+      color: #000;
+    }
 
-      body {
-        background: #f8f8f8;
-        color: var(--text-dark);
-      }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-      /* ================= NAVBAR ================= */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: "Inter", sans-serif;
-      }
+    .btn-purple {
+      background-color: #711e71;
+      color: #ffffff !important;
+      /* Forces text to white */
+      padding: 8px 15px;
+      border-radius: 4px;
+      font-weight: 500;
+      text-decoration: none;
+      /* Removes underline if using <a> tags */
+    }
 
-      body {
-        font-size: 14px;
-      }
+    .btn-purple:hover {
+      color: #ffffff;
+      opacity: 0.9;
+      /* Slight fade effect on hover */
+    }
 
-      a {
-        text-decoration: none;
-        color: #000;
-      }
+    .btn-green {
+      background-color: #008641;
+      color: #ffffff !important;
+      /* Forces text to white */
+      padding: 8px 15px;
+      border-radius: 4px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+    }
 
-      header {
-        width: 100%;
-        border-bottom: 1px solid #ccc;
-      }
+    .btn-green:hover {
+      color: #ffffff;
+      opacity: 0.9;
+    }
 
-      .top-bar {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: #eae7ee;
-        padding: 5px 20px;
-        font-size: 13px;
-      }
+    .search-icon {
+      border: 2px solid #711e71;
+      padding: 6px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
 
-      .top-bar a {
-        margin-left: 20px;
-        color: #070101;
-      }
-
-      .top-bar span {
-        margin-left: 10px;
-      }
-
-      .main-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-      }
-
-      .logo img {
-        height: 100px;
-      }
-
-      .logo2 img {
-        height: 100px;
-      }
+    /* Responsive */
+    @media (max-width: 900px) {
       .nav-links {
-        display: flex;
-        gap: 25px;
-        align-items: center;
+        display: none;
       }
-
-      .nav-links a {
-        font-weight: 500;
-        color: #000;
-      }
-
-      .nav-actions {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-      .btn-purple {
-        background-color: #711e71;
-        color: #ffffff !important; /* Forces text to white */
-        padding: 8px 15px;
-        border-radius: 4px;
-        font-weight: 500;
-        text-decoration: none; /* Removes underline if using <a> tags */
-      }
-
-      .btn-purple:hover {
-        color: #ffffff;
-        opacity: 0.9; /* Slight fade effect on hover */
-      }
-
-      .btn-green {
-        background-color: #008641;
-        color: #ffffff !important; /* Forces text to white */
-        padding: 8px 15px;
-        border-radius: 4px;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        text-decoration: none;
-      }
-
-      .btn-green:hover {
-        color: #ffffff;
-        opacity: 0.9;
-      }
-      .search-icon {
-        border: 2px solid #711e71;
-        padding: 6px;
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-
-      /* Responsive */
-      @media (max-width: 900px) {
-        .nav-links {
-          display: none;
-        }
-      }
+    }
 
 
-      @layer components {
-  .btn-purple-standard {
-    @apply inline-block bg-[#70297d] hover:bg-[#5a185a] text-white px-[20px] py-[15px] rounded-[8px] font-semibold text-[16px] transition-colors duration-300 no-underline text-center;
-  }
-} 
+    @layer components {
+      .btn-purple-standard {
+        @apply inline-block bg-[#70297d] hover:bg-[#5a185a] text-white px-[20px] py-[15px] rounded-[8px] font-semibold text-[16px] transition-colors duration-300 no-underline text-center;
+      }
+    }
 
-      /* ================= HERO ================= */
-      .hero {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        padding: 60px 40px;
-        gap: 40px;
+    /* ================= HERO ================= */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      padding: 60px 40px;
+      gap: 40px;
+    }
+
+    .hero-text h1 {
+      font-size: 64px;
+      line-height: 1.1;
+      font-family: "DM Serif Display",sans-serif ";
+    }
+
+    .hero-text h1 span {
+      color: #711e71;
+      font-family: "DM Serif Display",sans-serif ";
+    }
+
+    .hero-text p {
+      margin-top: 16px;
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .btn-outline {
+      padding: 12px 18px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .media-card {
+      top: 90px;
+      background: var(--light-purple);
+      border-radius: 24px;
+      padding: 20px;
+      position: relative;
+      width: 100%;
+      /* always keep 100% */
+      height: 530px;
+      /* increase card height */
+    }
+
+    /* Purple Button Style */
+
+    .buttons-container {
+      text-align: right;
+    }
+
+
+    .btn-purple {
+      background-color: #70297d;
+      color: #ffffff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-purple:hover {
+      background-color: #5a185a;
+      /* Slightly darker purple on hover */
+    }
+
+    /* Green Button Style */
+    .btn-green {
+      background-color: #28a745;
+      color: #ffffff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      margin-left: 20px;
+      /* ← move space to left */
+      margin-right: 0;
+      /* remove right spacing */
+    }
+
+
+    .btn-green:hover {
+      background-color: #218838;
+      /* Slightly darker green on hover */
+    }
+
+
+
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+      /* Aligns to the right */
+      width: 100%;
+    }
+
+    .btn-purple-right {
+      display: inline-block;
+      background-color: #70297d;
+      color: #ffffff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-family: sans-serif;
+    }
+
+    .btn-purple-right:hover {
+      background-color: #5a185a;
+    }
+
+    /* ================= IDEA SECTION ================= */
+    .idea {
+      padding: 80px 40px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+      background-color: #f5d3f6;
+    }
+
+    .idea img {
+      width: 100%;
+      border-radius: 34px;
+    }
+
+    .idea h2 {
+      font-size: 46px;
+      margin-bottom: 30px;
+      color: #711e71;
+    }
+
+    .idea p {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    /* ================= JOURNEY ================= */
+    .journey {
+      padding: 80px 40px;
+    }
+
+    .journey h2 {
+      font-size: 42px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--teal);
+      padding: 26px;
+      border-radius: 18px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    /* ================= WAYS TO USE SECTION ================= */
+    .retire-usage {
+      padding: 80px 40px;
+      background: #fdfdfd;
+    }
+
+    .retire-usage-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 30px;
+    }
+
+    .brand-side {
+      flex: 1;
+      min-width: 350px;
+      text-align: center;
+      border: 1px solid #eee;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #fff;
+      padding-bottom: 40px;
+    }
+
+    .image-mask {
+      position: relative;
+      height: 350px;
+      background: #711e71;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      margin-bottom: 25px;
+    }
+
+    .image-mask img {
+      width: 70%;
+      height: 190%;
+      object-fit: cover;
+    }
+
+    .brand-side h2 {
+      font-size: 42px;
+      color: var(--text-dark);
+      padding: 0 20px;
+    }
+
+    .brand-side h2 span {
+      color: var(--purple);
+    }
+
+    .info-side {
+      flex: 1;
+      min-width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .info-card {
+      padding: 30px;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .info-card-pink {
+      background-color: var(--card-pink);
+    }
+
+    .info-card-orange {
+      background-color: var(--card-orange);
+    }
+
+    .info-card h3 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      padding-right: 40px;
+    }
+
+    .info-card ul {
+      padding-left: 20px;
+      margin: 15px 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .icon-badge {
+      position: absolute;
+      top: 15px;
+      /* Moved closer to the edge */
+      right: 15px;
+      /* Moved closer to the edge */
+      background: white;
+      padding: 6px;
+      /* Reduced from 10px */
+      border-radius: 6px;
+      /* Sharper corners for a smaller look */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      /* Lighter shadow for smaller surface */
+    }
+
+    /* If there is an icon or image inside the badge */
+    .icon-badge img,
+    .icon-badge i {
+      width: 36px;
+      /* Explicitly set a small size */
+      height: 36px;
+      display: block;
+    }
+
+    .btn-dark-cta {
+      background: #1a202c;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    .btn-dark-cta:hover {
+      background: #000;
+    }
+
+    /* ================= FOOTER SECTION ================= */
+    :root {
+      --bg-deep-purple: #200025;
+      /* Very dark background */
+      --accent-purple: #711e7e;
+      /* Top bar and buttons */
+      --text-white: #ffffff;
+      --text-gray: #b0b0b0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "poppins", sans-serif;
+    }
+
+    .main-footer {
+      background-color: var(--bg-deep-purple);
+      color: var(--text-white);
+    }
+
+    /* Top bar with icons */
+    .footer-top-bar {
+      background-color: var(--accent-purple);
+      display: flex;
+      justify-content: space-around;
+      padding: 30px 5%;
+      font-size: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* Content Area */
+    .footer-content {
+      padding: 50px 8%;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid #200025;
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+
+    .link-column h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .link-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .link-column li {
+      font-size: 13px;
+      color: var(--text-gray);
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    /* Bottom Flex (Logo, Contact, Form) */
+    .footer-bottom-flex {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .call-form-card {
+      background: #2a042a;
+      padding: 25px;
+      border-radius: 4px;
+      width: 350px;
+    }
+
+    .call-form-card input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .call-form-card .btn-purple {
+      width: 100%;
+      background: var(--accent-purple);
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+
+    }
+
+    /* Bottom Bar */
+    .footer-bottom-bar {
+      background: #110111;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-gray);
+    }
+
+    .floating-contact {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .float-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .wa-bg {
+      background: #25d366;
+    }
+
+    .msg-bg {
+      background: #711e71;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+
+      .hero,
+      .idea,
+      .footer-navigation,
+      .footer-top-links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
       }
 
       .hero-text h1 {
-        font-size: 64px;
-        line-height: 1.1;
-      }
-
-      .hero-text h1 span {
-        color: #711e71;
-      }
-
-      .hero-text p {
-        margin-top: 16px;
-        font-size: 18px;
-      }
-
-      .hero-actions {
-        margin-top: 28px;
-        display: flex;
-        gap: 16px;
-      }
-
-      .btn-outline {
-        padding: 12px 18px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        background: #fff;
-        cursor: pointer;
-      }
-
-      .hero-media {
-        position: relative;
-      }
-
-      .media-card {
-        top: 90px;
-        background: var(--light-purple);
-        border-radius: 24px;
-        padding: 20px;
-        position: relative;
-        width: 100%; /* always keep 100% */
-        height: 530px; /* increase card height */
-      }
-
-      /* Purple Button Style */
-
-.buttons-container {
-  text-align: right;
-}
-
-
-      .btn-purple {
-        background-color: #70297d;
-        color: #ffffff;
-        padding: 15px 20px;
-        border-radius: 8px;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .btn-purple:hover {
-        background-color: #5a185a; /* Slightly darker purple on hover */
-      }
-
-      /* Green Button Style */
-      .btn-green {
-  background-color: #28a745;
-  color: #ffffff;
-  padding: 15px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  margin-left: 20px;   /* ← move space to left */
-  margin-right: 0;     /* remove right spacing */
-}
-
-
-      .btn-green:hover {
-        background-color: #218838; /* Slightly darker green on hover */
-      }
-
-
-
-      .button-container {
-    display: flex;
-    justify-content: flex-end; /* Aligns to the right */
-    width: 100%;
-}
-
-.btn-purple-right {
-    display: inline-block;
-    background-color: #70297d;
-    color: #ffffff;
-    padding: 15px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-family: sans-serif;
-}
-
-.btn-purple-right:hover {
-    background-color: #5a185a;
-}
-      /* ================= IDEA SECTION ================= */
-      .idea {
-        padding: 80px 40px;
-        display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
-        gap: 60px;
-        align-items: center;
-        background-color: #f5d3f6;
-      }
-
-      .idea img {
-        width: 100%;
-        border-radius: 24px;
-      }
-
-      .idea h2 {
-        font-size: 46px;
-        margin-bottom: 80px;
-        color: #711e71;
-      }
-
-      .idea p {
-        font-size: 16px;
-        line-height: 1.6;
-      }
-
-      /* ================= JOURNEY ================= */
-      .journey {
-        padding: 80px 40px;
-      }
-
-      .journey h2 {
-        font-size: 42px;
-        margin-bottom: 40px;
-      }
-
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
-      }
-
-      .card {
-        background: var(--teal);
-        padding: 26px;
-        border-radius: 18px;
-      }
-
-      .card h3 {
-        font-size: 18px;
-        margin-bottom: 12px;
-      }
-
-      .card p {
-        font-size: 14px;
-        color: #333;
-      }
-
-      /* ================= WAYS TO USE SECTION ================= */
-      .retire-usage {
-        padding: 80px 40px;
-        background: #fdfdfd;
-      }
-
-      .retire-usage-container {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 0 auto;
-        gap: 30px;
-      }
-
-      .brand-side {
-        flex: 1;
-        min-width: 350px;
-        text-align: center;
-        border: 1px solid #eee;
-        border-radius: 24px;
-        overflow: hidden;
-        background: #fff;
-        padding-bottom: 40px;
-      }
-
-      .image-mask {
-        position: relative;
-        height: 350px;
-        background: #711e71;
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-        margin-bottom: 25px;
-      }
-
-      .image-mask img {
-        width: 70%;
-        height: 190%;
-        object-fit: cover;
-      }
-
-      .brand-side h2 {
-        font-size: 42px;
-        color: var(--text-dark);
-        padding: 0 20px;
-      }
-
-      .brand-side h2 span {
-        color: var(--purple);
-      }
-
-      .info-side {
-        flex: 1;
-        min-width: 350px;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-
-      .info-card {
-        padding: 30px;
-        border-radius: 20px;
-        position: relative;
-      }
-
-      .info-card-pink {
-        background-color: var(--card-pink);
-      }
-
-      .info-card-orange {
-        background-color: var(--card-orange);
-      }
-
-      .info-card h3 {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        padding-right: 40px;
-      }
-
-      .info-card ul {
-        padding-left: 20px;
-        margin: 15px 0;
-        font-size: 0.95rem;
-        line-height: 1.6;
-      }
-
-      .icon-badge {
-        position: absolute;
-        top: 15px;
-        /* Moved closer to the edge */
-        right: 15px;
-        /* Moved closer to the edge */
-        background: white;
-        padding: 6px;
-        /* Reduced from 10px */
-        border-radius: 6px;
-        /* Sharper corners for a smaller look */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        /* Lighter shadow for smaller surface */
-      }
-
-      /* If there is an icon or image inside the badge */
-      .icon-badge img,
-      .icon-badge i {
-        width: 36px;
-        /* Explicitly set a small size */
-        height: 36px;
-        display: block;
-      }
-
-      .btn-dark-cta {
-        background: #1a202c;
-        color: white;
-        border: none;
-        padding: 14px;
-        border-radius: 10px;
-        cursor: pointer;
-        font-weight: bold;
-        width: 100%;
-        transition: 0.3s;
-      }
-
-      .btn-dark-cta:hover {
-        background: #000;
-      }
-
-      /* ================= FOOTER SECTION ================= */
-      :root {
-        --bg-deep-purple: #200025; /* Very dark background */
-        --accent-purple: #711e7e; /* Top bar and buttons */
-        --text-white: #ffffff;
-        --text-gray: #b0b0b0;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      .main-footer {
-        background-color: var(--bg-deep-purple);
-        color: var(--text-white);
-      }
-
-      /* Top bar with icons */
-      .footer-top-bar {
-        background-color: var(--accent-purple);
-        display: flex;
-        justify-content: space-around;
-        padding: 30px 5%;
-        font-size: 14px;
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      /* Content Area */
-      .footer-content {
-        padding: 50px 8%;
-      }
-
-      .links-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        border-bottom: 1px solid #200025;
-        padding-bottom: 40px;
-        margin-bottom: 40px;
-      }
-
-      .link-column h3 {
-        font-size: 18px;
-        margin-bottom: 20px;
-      }
-
-      .link-column ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .link-column li {
-        font-size: 13px;
-        color: var(--text-gray);
-        margin-bottom: 12px;
-        cursor: pointer;
-      }
-
-      /* Bottom Flex (Logo, Contact, Form) */
-      .footer-bottom-flex {
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
-      }
-
-      .call-form-card {
-        background: #2a042a;
-        padding: 25px;
-        border-radius: 4px;
-        width: 350px;
-      }
-
-      .call-form-card input {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 10px;
-        border: none;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-
-      .call-form-card .btn-purple {
-        width: 100%;
-        background: var(--accent-purple);
-        color: white;
-        border: none;
-        padding: 15px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 600;
-        
-      }
-
-      /* Bottom Bar */
-      .footer-bottom-bar {
-        background: #110111;
-        padding: 15px 5%;
-        display: flex;
-        justify-content: space-between;
-        font-size: 12px;
-        color: var(--text-gray);
-      }
-      .floating-contact {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        z-index: 1000;
-      }
-
-      .float-icon {
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 24px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-      }
-
-      .wa-bg {
-        background: #25d366 ;
-      }
-
-      .msg-bg {
-        background: #711e71;
-      }
-
-      /* ================= RESPONSIVE ================= */
-      @media (max-width: 900px) {
-        .hero,
-        .idea,
-        .footer-navigation,
-        .footer-top-links {
-          grid-template-columns: 1fr;
-          gap: 30px;
-        }
-
-        .cards {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .hero-text h1 {
-          font-size: 48px;
-        }
-      }
-
-      .journey {
-        padding: 60px 20px;
-        text-align: center;
-        font-family: sans-serif;
-      }
-
-      .journey h2 {
         font-size: 48px;
-        color: #000000;
-        margin-bottom: 60px;
       }
+    }
 
-      .cards {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
+    .journey {
+      padding: 60px 20px;
+      text-align: center;
+      font-family: sans-serif;
+    }
 
-      .card {
-        background-color: #70297d;
-        /* Light teal/grey background */
-        border-radius: 15px;
-        padding: 30px 20px;
-        flex: 1;
-        min-height: 250px;
-        display: flex;
+    .journey h2 {
+      font-size: 48px;
+      color: #000000;
+      margin-bottom: 60px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #70297d;
+      /* Light teal/grey background */
+      border-radius: 15px;
+      padding: 30px 20px;
+      flex: 1;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card h3 {
+      color: #fff;
+      /* Teal text color */
+      font-size: 22px;
+      margin-bottom: 25px;
+      text-transform: capitalize;
+    }
+
+    .card p {
+      color: #ffff;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-top: 25px;
+    }
+
+    /* Timeline/Slider Styles */
+    .timeline-container {
+      position: relative;
+      width: 100%;
+      height: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      /* Thin dark line */
+    }
+
+    .dot {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-color: #fff;
+      /* Teal dot */
+      border-radius: 50%;
+    }
+
+    /*banner for account opening*/
+    .investment-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 20px 40px;
+      border-radius: 8px;
+      /* Optional slight rounding */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      /* Optional subtle shadow */
+      font-family: sans-serif;
+      max-width: 1000px;
+      margin: 20px auto;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .key-icon svg {
+      width: 30px;
+      height: 30px;
+      color: #008751;
+      /* The green color from your image */
+    }
+
+    .banner-text {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 0;
+    }
+
+    .banner-text span {
+      color: #008751;
+      /* Green text for 'Investment Account' */
+      font-weight: bold;
+    }
+
+    .cta-button {
+      background-color: #711e71;
+      /* The purple color */
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .cta-button:hover {
+      background-color: #6a007e;
+      /* Darker purple on hover */
+    }
+
+    /* Responsive adjustment for mobile */
+    @media (max-width: 768px) {
+      .investment-banner {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+        gap: 20px;
       }
 
-      .card h3 {
-        color: #fff;
-        /* Teal text color */
-        font-size: 22px;
-        margin-bottom: 25px;
-        text-transform: capitalize;
+      .banner-content {
+        flex-direction: column;
+      }
+    }
+
+
+
+
+    /* Dot Positions based on SS */
+    .pos-start {
+      left: 0;
+    }
+
+    .pos-mid-left {
+      left: 20%;
+    }
+
+    .pos-mid-right {
+      left: 70%;
+    }
+
+    .pos-end {
+      right: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+    }
+
+    /* Hover effect for back button */
+    #back-to-home:hover {
+      background-color: #711e7e !important;
+      border-color: #999 !important;
+    }
+
+    /*model*/
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: #fff;
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      height: 80%;
+
+      border-radius: 12px;
+      position: relative;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal h2 {
+      margin-top: 0;
+      color: #711e71;
+    }
+
+    .modal p {
+      line-height: 1.6;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      font-size: 22px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      from {
+        transform: translateY(10px);
+        opacity: 0;
       }
 
-      .card p {
-        color: #ffff;
-        font-size: 16px;
-        line-height: 1.4;
-        margin-top: 25px;
+      to {
+        transform: translateY(0);
+        opacity: 1;
       }
+    }
 
-      /* Timeline/Slider Styles */
-      .timeline-container {
-        position: relative;
-        width: 100%;
-        height: 20px;
-        display: flex;
-        align-items: center;
-      }
+    /* ================= SUMMARY PAGE STYLES ================= */
+    .summary-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      gap: 40px;
+      padding: 20px;
+    }
 
-      .line {
-        width: 100%;
-        height: 1px;
-        background-color: #fff;
-        /* Thin dark line */
-      }
+    .summary-main {
+      flex: 2;
+    }
 
-      .dot {
-        position: absolute;
-        width: 14px;
-        height: 14px;
-        background-color: #fff;
-        /* Teal dot */
-        border-radius: 50%;
-      }
-/*banner for account opening*/
-.investment-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #ffffff;
-  padding: 20px 40px;
-  border-radius: 8px; /* Optional slight rounding */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Optional subtle shadow */
-  font-family: sans-serif;
-  max-width: 1000px;
-  margin: 20px auto;
-}
+    .summary-sidebar {
+      flex: 1;
+      background-color: #f0fafa;
+      /* Matches the light teal in the image */
+      padding: 30px;
+      border-radius: 4px;
+    }
 
-.banner-content {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+    .summary-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
 
-.key-icon svg {
-  width: 30px;
-  height: 30px;
-  color: #008751; /* The green color from your image */
-}
+    .summary-header h2 {
+      font-size: 32px;
+      color: #333;
+      font-weight: 400;
+    }
 
-.banner-text {
-  font-size: 1.1rem;
-  color: #333;
-  margin: 0;
-}
+    .summary-actions button:hover {
+      opacity: 0.9;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-.banner-text span {
-  color: #008751; /* Green text for 'Investment Account' */
-  font-weight: bold;
-}
+    .fund-name {
+      font-size: 28px;
+      color: #111;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
 
-.cta-button {
-  background-color: #711e71; /* The purple color */
-  color: white;
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background 0.3s ease;
-  white-space: nowrap;
-}
+    .stats-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0;
+    }
 
-.cta-button:hover {
-  background-color: #6a007e; /* Darker purple on hover */
-}
+    .stat-item {
+      flex: 1;
+      border-left: 1px solid #333;
+      padding-left: 20px;
+    }
 
-/* Responsive adjustment for mobile */
-@media (max-width: 768px) {
-  .investment-banner {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-  .banner-content {
-    flex-direction: column;
-  }
-}
+    .stat-item:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
 
+    .stat-value {
+      font-size: 42px;
+      font-weight: 700;
+    }
 
+    .stat-label {
+      font-size: 13px;
+      color: #555;
+      margin-top: 5px;
+      text-transform: capitalize;
+    }
 
+    .color-green {
+      color: #008641;
+    }
 
-      /* Dot Positions based on SS */
-      .pos-start {
-        left: 0;
-      }
+    .color-purple {
+      color: #70297d;
+    }
 
-      .pos-mid-left {
-        left: 20%;
-      }
+    .color-blue {
+      color: #0076ce;
+    }
 
-      .pos-mid-right {
-        left: 70%;
-      }
+    .disclaimer-text {
+      font-size: 13px;
+      color: #333;
+      text-transform: uppercase;
+      margin-top: 30px;
+    }
 
-      .pos-end {
-        right: 0;
-      }
+    .next-steps-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
 
-      /* Responsive */
-      @media (max-width: 768px) {
-        .cards {
-          flex-direction: column;
-        }
-      }
+    .sidebar-section {
+      margin-bottom: 30px;
+    }
 
-      /* Hover effect for back button */
-      #back-to-home:hover {
-        background-color: #711e7e !important;
-        border-color: #999 !important;
-      }
+    .sidebar-section h4 {
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
 
-      /*model*/
-      .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-      }
+    .sidebar-list {
+      list-style: none;
+      padding-left: 0;
+    }
 
-      .modal {
-        background: #fff;
-        padding: 30px;
-        max-width: 500px;
-        width: 90%;
-        border-radius: 12px;
-        position: relative;
-        animation: fadeIn 0.3s ease;
-      }
+    .sidebar-list li {
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 1.4;
+      display: flex;
+      gap: 10px;
+    }
 
-      .modal h2 {
-        margin-top: 0;
-        color: #711e71;
-      }
+    .sidebar-list li span {
+      font-weight: bold;
+    }
+  </style>
+</head>
 
-      .modal p {
-        line-height: 1.6;
-      }
+<body>
+  <header>
+    <!-- Top bar -->
+    <div class="top-bar">
+      <span>🇵🇰 اردو</span>
+      <span>📞 0800 - 42525 (HALAL)</span>
+      <a href="#">InvestHER Club</a>
+      <a href="#">Fund Prices</a>
+      <a href="#">Fund Manager Reports</a>
+      <a href="#">Downloads</a>
+      <a href="#">Digital Offerings</a>
+      <a href="#">Contact Us</a>
+      <a href="https://members.almeezangroup.com/" class="btn-purple">Meezan Funds Online</a>
+      <a href="https://www.almeezangroup.com/financial-calculators/" class="btn-green">Financial Calculators</a>
+    </div>
 
-      .modal-close {
-        position: absolute;
-        top: 12px;
-        right: 15px;
-        font-size: 22px;
-        cursor: pointer;
-        color: #333;
-      }
-
-      @keyframes fadeIn {
-        from {
-          transform: translateY(10px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-
-      /* ================= SUMMARY PAGE STYLES ================= */
-      .summary-container {
-        display: flex;
-        max-width: 1200px;
-        margin: 40px auto;
-        gap: 40px;
-        padding: 20px;
-      }
-
-      .summary-main {
-        flex: 2;
-      }
-
-      .summary-sidebar {
-        flex: 1;
-        background-color: #f0fafa; /* Matches the light teal in the image */
-        padding: 30px;
-        border-radius: 4px;
-      }
-
-      .summary-header {
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 20px;
-        margin-bottom: 30px;
-      }
-
-      .summary-header h2 {
-        font-size: 32px;
-        color: #333;
-        font-weight: 400;
-      }
-
-      .summary-actions button:hover {
-    opacity: 0.9;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-      .fund-name {
-        font-size: 28px;
-        color: #111;
-        margin-bottom: 10px;
-        font-weight: 600;
-      }
-
-      .stats-row {
-        display: flex;
-        justify-content: space-between;
-        margin: 40px 0;
-      }
-
-      .stat-item {
-        flex: 1;
-        border-left: 1px solid #333;
-        padding-left: 20px;
-      }
-
-      .stat-item:first-child {
-        border-left: none;
-        padding-left: 0;
-      }
-
-      .stat-value {
-        font-size: 42px;
-        font-weight: 700;
-      }
-
-      .stat-label {
-        font-size: 13px;
-        color: #555;
-        margin-top: 5px;
-        text-transform: capitalize;
-      }
-
-      .color-green {
-        color: #008641;
-      }
-      .color-purple {
-        color: #70297d;
-      }
-      .color-blue {
-        color: #0076ce;
-      }
-
-      .disclaimer-text {
-        font-size: 13px;
-        color: #333;
-        text-transform: uppercase;
-        margin-top: 30px;
-      }
-
-      .next-steps-title {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-
-      .sidebar-section {
-        margin-bottom: 30px;
-      }
-
-      .sidebar-section h4 {
-        margin-bottom: 15px;
-        font-weight: 600;
-      }
-
-      .sidebar-list {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      .sidebar-list li {
-        margin-bottom: 15px;
-        font-size: 14px;
-        line-height: 1.4;
-        display: flex;
-        gap: 10px;
-      }
-
-      .sidebar-list li span {
-        font-weight: bold;
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <!-- Top bar -->
-      <div class="top-bar">
-        <span>🇵🇰 اردو</span>
-        <span>📞 0800 - 42525 (HALAL)</span>
-        <a href="#">InvestHER Club</a>
-        <a href="#">Fund Prices</a>
-        <a href="#">Fund Manager Reports</a>
-        <a href="#">Downloads</a>
-        <a href="#">Digital Offerings</a>
-        <a href="#">Contact Us</a>
-        <a href="https://members.almeezangroup.com/" class="btn-purple">Meezan Funds Online</a>
-        <a href="https://www.almeezangroup.com/financial-calculators/" class="btn-green">Financial Calculators</a>
+    <!-- Main nav -->
+    <div class="main-nav">
+      <div class="logo">
+        <img src="logo.svg" alt="Al Meezan Logo" />
+      </div>
+      <div class="nav-links">
+        <a href="#">Why Al Meezan</a>
+        <a href="#">First time investor</a>
+        <a href="#">Regular Investor</a>
+        <a href="#">Customer Services</a>
+        <a href="#">Investor Education</a>
       </div>
 
-      <!-- Main nav -->
-      <div class="main-nav">
-        <div class="logo">
-          <img src="logo.svg" alt="Al Meezan Logo" />
-        </div>
-        <div class="nav-links">
-          <a href="#">Why Al Meezan</a>
-          <a href="#">First time investor</a>
-          <a href="#">Regular Investor</a>
-          <a href="#">Customer Services</a>
-          <a href="#">Investor Education</a>
-        </div>
+      <style>
+        .nav-links {
+          display: flex;
+          gap: 30px;
+          /* space between links */
+          font-family: "Poppins", sans-serif;
+          margin: 20px 0;
+        }
 
-        <style>
-          .nav-links {
-            display: flex;
-            gap: 30px; /* space between links */
-            font-family: "Arial", sans-serif;
-            margin: 20px 0;
-          }
+        .nav-links a {
+          font-weight: 400;
+          /* bold */
+          font-size: 18px;
+          /* bigger font */
 
-          .nav-links a {
-            font-weight: 700; /* bold */
-            font-size: 18px; /* bigger font */
+          text-decoration: none;
+          transition: all 0.3s ease;
+          /* smooth hover effect */
+        }
 
-            text-decoration: none;
-            transition: all 0.3s ease; /* smooth hover effect */
-          }
-
-          .nav-links a:hover {
-            color: #711e7e; /* lighter purple on hover */
-            transform: scale(1.1); /* slight zoom effect */
-          }
-        </style>
+        .nav-links a:hover {
+          color: #711e7e;
+          /* lighter purple on hover */
+          transform: scale(1.1);
+          /* slight zoom effect */
+        }
+      </style>
 
 
 
 
-        <div class="nav-actions">
-          <div class="search-icon">🔍</div>
-          <a href="https://members.almeezangroup.com/MeezanAccountOpening" class="btn-purple">Digital Account Opening</a>
-        </div>
+      <div class="nav-actions">
+        <div class="search-icon">🔍</div>
+        <a href="https://members.almeezangroup.com/MeezanAccountOpening" class="btn-purple">Digital Account Opening</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main id="main-content">
-      <section class="hero">
-        <div class="hero-text">
-          <h1><span>Retire</span> Right</h1>
-          <br>
-          <h2 style="color: #008641; font-size: 28px; text-align:left;">
-    Aap ke Mustaqbil ki Planning
-</h2>
-          <div class="hero-actions"></div>
-          <div
-            style="
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-text">
+        <h1><span>Retire</span> Right</h1>
+        <br>
+        <h2 style="color: #008641; font-size: 28px; text-align:left;">
+          Aap ke Mustaqbil ki Planning
+        </h2>
+        <div class="hero-actions"></div>
+        <div style="
               max-width: 800px;
               margin: 40px auto;
               padding: 35px;
@@ -1038,398 +1082,352 @@
               border-radius: 16px;
               border-left: 8px solid #008641;
               box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
-              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            "
-          >
-            <h2
-              style="
+            
+            ">
+          <h2 style="
                 color: #711e7e;
                 margin-top: 0;
                 font-size: 26px;
                 font-weight: 700;
                 letter-spacing: -0.5px;
-              "
-            >
-              Al Meezan Retire Right Plan Calculator
-            </h2>
+              ">
+            Al Meezan Retire Right Plan Calculator
+          </h2>
 
-            <p
-              style="
+          <p style="
                 color: #000000;
                 line-height: 1.8;
-                font-size: 16px;
+                font-size: 20px;
                 text-align: justify;
                 margin-bottom: 20px;
-              "
-            >
-              The <strong>Al Meezan Retire Right Plan Calculator</strong> is designed to help you build a financially secure and Shariah-compliant future. By integrating key variables such as your current age, target retirement age, and monthly contribution capacity, the tool generates a detailed projection of your retirement corpus.
-            </p>
+              ">
+            The <strong>Al Meezan Retire Right Plan Calculator</strong> is designed to help you build a financially
+            secure and Shariah-compliant future. By integrating key variables such as your current age, target
+            retirement age, and monthly contribution capacity, the tool generates a detailed projection of your
+            retirement corpus.
+          </p>
 
-            <div
-              style="
+          <div style="
                 border-top: 1px solid #eee;
                 border-bottom: 1px solid #eee;
                 padding: 20px 0;
                 margin: 25px 0;
-              "
-            >
-              <p
-                style="
+              ">
+            <p style="
                   color: #711e7e;
               
                   font-weight: 500;
                   text-align: center;
                   margin: 0;
-                  font-size: 17px;
-                "
-              >
-               <strong> Planning for tomorrow, rooted in the values of today.</strong>
-              </p>
-            </div>
+                  font-size: 20px;
+                ">
+              <strong> Planning for tomorrow, rooted in the values of today.</strong>
+            </p>
+          </div>
 
-            <p
-              style="
+          <p style="
                 color: #000000;
                 line-height: 1.8;
-                font-size: 16px;
+                font-size: 20px;
                 text-align: justify;
                 margin-bottom: 0;
-              "
-            >
-              Aligned strictly with Islamic banking principles, our calculator
-              ensures that your path to retirement remains 100%
-              Shariah-compliant. Whether you are at the dawn of your career,
-              navigating mid-life milestones, or fine-tuning your final
-              strategy, this tool serves as an essential guide. 
-            </p>
-          </div>
-          
+              ">
+            Aligned strictly with Islamic banking principles, our calculator
+            ensures that your path to retirement remains 100%
+            Shariah-compliant. Whether you are at the dawn of your career,
+            navigating mid-life milestones, or fine-tuning your final
+            strategy, this tool serves as an essential guide.
+          </p>
+        </div>
 
-          <button id="retire-calc-btn" class="btn-purple" style="margin-right:12px;">
-  Retire Right Calculator
-</button>
 
-         
-          <button
-  class="btn-green" style="margin-right:12px;"
-  onclick="openModal(
+        <button id="retire-calc-btn" class="btn-purple" style="margin-right:12px;">
+          Retire Right Calculator
+        </button>
+
+
+        <button class="btn-green" style="margin-right:12px;" onclick="openModal(
     'Link to Retirement guide',
     'href=https://www.almeezangroup.com/regular-investor/meezan-tahaffuz-pension-fund/'
-  )"
->
-  Retirement Guide
-</button>
+  )">
+          Retirement Guide
+        </button>
 
 
-<!-- PDF -->
+        <!-- PDF -->
 
-          <a href="https://www.almeezangroup.com/regular-investor/meezan-tahaffuz-pension-fund/" class="btn-green">Retirement plans</a>
+        <a href="https://www.almeezangroup.com/regular-investor/meezan-tahaffuz-pension-fund/"
+          class="btn-green">Retirement plans</a>
 
 
+      </div>
+
+      <div class="hero-media">
+        <div class="media-card" style="width: 400px; margin-left: 180px">
+          <img src="retirement.png" alt="Retirement" style="width: 100%; height: 480px" />
+        </div>
+      </div>
+    </section>
+
+    <section class="idea">
+      <img src="walkingcouple.png" alt="Couple walking" />
+      <div>
+        <h2>Idea Behind Retiring Right</h2>
+        <p>
+          You don’t become financially independent at a specific age. You
+          become financially independent when:
+        </p>
+        <p>
+          <strong>Your savings and investments can support your expenses — without
+            relying on regular income.</strong>
+        </p>
+        <p>
+          That point depends on several factors, not just how much you earn or
+          save.
+        </p>
+        <p>
+          This tool helps you understand when that point may be reached, what
+          it depends on, and how different choices affect the outcome
+        </p>
+      </div>
+    </section>
+
+    <section class="journey">
+      <h2>How Your Financial Journey Is Looked At</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Income</h3>
+          <div class="timeline-container">
+            <div class="line"></div>
+            <div class="dot pos-start"></div>
+          </div>
+          <p>What you earn during your working years.</p>
         </div>
 
-        <div class="hero-media">
-          <div class="media-card" style="width: 400px; margin-left: 180px">
-            <img
-              src="retirement.png"
-              alt="Retirement"
-              style="width: 100%; height: 480px"
-            />
+        <div class="card">
+          <h3>Spending</h3>
+          <div class="timeline-container">
+            <div class="line"></div>
+            <div class="dot pos-mid-left"></div>
           </div>
+          <p>What your lifestyle costs — today and in the future</p>
         </div>
-      </section>
 
-      <section class="idea">
-        <img src="walkingcouple.png" alt="Couple walking" />
-        <div>
-          <h2>Idea Behind Retiring Right</h2>
+        <div class="card">
+          <h3>investment</h3>
+          <div class="timeline-container">
+            <div class="line"></div>
+            <div class="dot pos-mid-right"></div>
+          </div>
+          <p>What you set aside and allow to grow.</p>
+        </div>
+
+        <div class="card">
+          <h3>Time</h3>
+          <div class="timeline-container">
+            <div class="line"></div>
+            <div class="dot pos-end"></div>
+          </div>
           <p>
-            You don’t become financially independent at a specific age. You
-            become financially independent when:
-          </p>
-          <p>
-            <strong
-              >Your savings and investments can support your expenses — without
-              relying on regular income.</strong
-            >
-          </p>
-          <p>
-            That point depends on several factors, not just how much you earn or
-            save.
-          </p>
-          <p>
-            This tool helps you understand when that point may be reached, what
-            it depends on, and how different choices affect the outcome
+            How long your money has to work, and how long it needs to last.
           </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="journey">
-        <h2>How Your Financial Journey Is Looked At</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Income</h3>
-            <div class="timeline-container">
-              <div class="line"></div>
-              <div class="dot pos-start"></div>
-            </div>
-            <p>What you earn during your working years.</p>
+
+    <!-- /* banner */ -->
+
+
+    <div class="investment-banner">
+      <div class="banner-content">
+        <span class="key-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+          </svg>
+        </span>
+
+        <p class="banner-text">
+          Open your <span>'Investment Account'</span> wherever you are, whenever you want!
+        </p>
+      </div>
+
+      <a href="https://members.almeezangroup.com/MeezanAccountOpening" class="cta-button">Open Your Digital Account</a>
+    </div>
+
+    <!-- ways right people use right retire -->
+
+    <section class="retire-usage">
+      <div class="retire-usage-container">
+        <div class="brand-side">
+          <div class="image-mask">
+            <img src="professional.png" alt="Professional Consultation"
+              style="width: 700px; height: auto ; top:20px ;" />
           </div>
+          <h2>
+            Ways People Use<br /><span class="purple-text">Retire</span> Right
+          </h2>
+        </div>
 
-          <div class="card">
-            <h3>Spending</h3>
-            <div class="timeline-container">
-              <div class="line"></div>
-              <div class="dot pos-mid-left"></div>
+        <div class="info-side">
+          <div class="info-card info-card-pink">
+            <div class="icon-badge">
+              <img src="target.png" alt="Target icon" />
             </div>
-            <p>What your lifestyle costs — today and in the future</p>
-          </div>
-
-          <div class="card">
-            <h3>investment</h3>
-            <div class="timeline-container">
-              <div class="line"></div>
-              <div class="dot pos-mid-right"></div>
-            </div>
-            <p>What you set aside and allow to grow.</p>
-          </div>
-
-          <div class="card">
-            <h3>Time</h3>
-            <div class="timeline-container">
-              <div class="line"></div>
-              <div class="dot pos-end"></div>
-            </div>
+            <h3>SEE HOW CHOICES AFFECT THE FUTURE</h3>
             <p>
-              How long your money has to work, and how long it needs to last.
+              Small decisions today can have a meaningful effect over time.
+              Plans lets you explore what happens if:
             </p>
+            <ul>
+              <li>You save a little more</li>
+              <li>Your expenses change</li>
+              <li>Your earning period shortens or extends</li>
+            </ul>
+            <button class="btn-dark-cta" onclick="openModal(
+    'Understand the Impact of your decisions',
+    '<br>Start investing at age 25 with PKR 10,000 per month, increasing your contribution by 10% every year and earning an average return of 11.67%. With the power of compounding, this disciplined approach can help you build nearly PKR 14 Crore by retirement<br><br>Now raise your starting investment slightly to PKR 15,000 per month—keeping the same 10% annual increase and 11.67% average return—and your retirement corpus can grow to around PKR 23 Crore.<br><br>Just PKR 5,000 more per month today can mean almost PKR 9 Crore more tomorrow. Start early, stay consistent, and let compounding work for you.<br><br><br><img src=\'graph.png\' style=\'width:100%; border-radius:8px;\' alt=\'Compound Interest Graph\'>'
+)">
+              Understand the impact of your decisions
+            </button>
+          </div>
+
+          <div class="info-card info-card-orange">
+            <div class="icon-badge">
+              <img src="LOVE.png" alt="Consistency icon" />
+            </div>
+            <h3>PLAN WITH CONFIDENCE OVER TIME</h3>
+            <p>
+              Most long-term savings are not built through one large decision.
+            </p>
+            <ul>
+              <li>How steady monthly investing adds up over time</li>
+              <li>Why time often matters more than timing</li>
+              <li>How consistency can change long-term outcomes</li>
+            </ul>
+            <button class="btn-dark-cta" onclick="openModal(
+  'See How Regular Investing Supports Long-Term Goals',
+    '<br>If you begin investing at age 25, putting aside just PKR 10,000 per month and increasing your contribution by 10% every year, with an average return of 11.67%, the power of compounding can help you build nearly PKR 14 Crore by retirement.<br>Delay the same investment until age 35, with identical returns and contributions, and your retirement wealth drops sharply to around PKR 3.7 Crore.<br>Same investment. Same return. Just a 10-year delay—costing you over PKR 10 Crore. The lesson is simple: the earlier you start, the more time your money has to grow. Start today and let compounding work in your favor.<br><br><br><img src=\'graph2.png\' style=\'width:100%; border-radius:8px;\' alt=\'Compound Interest Graph\'>'
+)">
+              See how regular investing supports long-term goals
+            </button>
           </div>
         </div>
-      </section>
 
-
-      <!-- /* banner */ -->
-
-
-<div class="investment-banner">
-  <div class="banner-content">
-    <span class="key-icon">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
-      </svg>
-    </span>
-
-    <p class="banner-text">
-      Open your <span>'Investment Account'</span> wherever you are, whenever you want!
-    </p>
-  </div>
-
-  <a href="https://members.almeezangroup.com/MeezanAccountOpeningx" class="cta-button">Open Your Digital Account</a>
-</div>
-
-<!-- ways right people use right retire -->
-
-      <section class="retire-usage">
-        <div class="retire-usage-container">
-          <div class="brand-side">
-            <div class="image-mask">
-              <img
-                src="professional.png"
-                alt="Professional Consultation"
-                style="width: 700px; height: auto ; top:20px ;"
-              />
-            </div>
-            <h2>
-              Ways People Use<br /><span class="purple-text">Retire</span> Right
-            </h2>
-          </div>
-
-          <div class="info-side">
-            <div class="info-card info-card-pink">
-              <div class="icon-badge">
-                <img src="target.png" alt="Target icon" />
-              </div>
-              <h3>SEE HOW CHOICES AFFECT THE FUTURE</h3>
-              <p>
-                Small decisions today can have a meaningful effect over time.
-                Plans lets you explore what happens if:
-              </p>
-              <ul>
-                <li>You save a little more</li>
-                <li>Your expenses change</li>
-                <li>Your earning period shortens or extends</li>
-              </ul>
-              <button
-                class="btn-dark-cta"
-                onclick="openModal(
-    'Understand the Impact of Your Decisions',
-    'This tool helps you visualize how small changes—such as saving a little more, adjusting expenses, or changing your earning period—can significantly impact your future financial outcomes.'
-  )"
-  
-              >
-                Understand the impact of your decisions
-              </button>
-            </div>
-
-            <div class="info-card info-card-orange">
-              <div class="icon-badge">
-                <img src="LOVE.png" alt="Consistency icon" />
-              </div>
-              <h3>PLAN WITH CONFIDENCE OVER TIME</h3>
-              <p>
-                Most long-term savings are not built through one large decision.
-              </p>
-              <ul>
-                <li>How steady monthly investing adds up over time</li>
-                <li>Why time often matters more than timing</li>
-                <li>How consistency can change long-term outcomes</li>
-              </ul>
-              <button
-                class="btn-dark-cta"
-                onclick="openModal(
-    'Plan with Confidence Over Time',
-    'Consistent monthly investing can build long-term wealth. This view shows how staying invested and allowing time to work in your favor can make a meaningful difference.'
-  )"
-              >
-                See how regular investing supports long-term goals
-              </button>
-            </div>
-          </div>
-
-          <!-- Modal Overlay -->
-          <div class="modal-overlay" id="modalOverlay">
-            <div class="modal">
-              <span class="modal-close" onclick="closeModal()"></span>
-              <h2 id="modalTitle"></h2>
-              <p id="modalContent"></p>
-            </div>
+        <!-- Modal Overlay -->
+        <div class="modal-overlay" id="modalOverlay">
+          <div class="modal">
+            <span class="modal-close" onclick="closeModal()"></span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalContent"></p>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <section
-      id="disclaimer-page"
-      style="
+  <section id="disclaimer-page" style="
         display: none;
         padding: 60px 40px;
         max-width: 1000px;
         margin: 0 auto;
-      "
-    >
-      <div
-        style="
+      ">
+    <div style="
           display: flex;
           justify-content: center;
           align-items: center;
           margin-bottom: 50px;
           gap: 10px;
-        "
-      >
-        <div style="text-align: center">
-          <div
-            style="
+        ">
+      <div style="text-align: center">
+        <div style="
               width: 20px;
               height: 20px;
               border: 2px solid var(--purple);
               border-radius: 50%;
               margin: 0 auto 5px;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #666">Age/Balance</span>
-        </div>
-        <div
-          style="width: 100px; height: 1px; border-top: 2px dotted #ccc"
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
-              width: 20px;
-              height: 20px;
-              border: 2px solid #ccc;
-              border-radius: 50%;
-              margin: 0 auto 5px;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #666">Withdrawal</span>
-        </div>
-        <div
-          style="width: 100px; height: 1px; border-top: 2px dotted #ccc"
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
-              width: 20px;
-              height: 20px;
-              border: 2px solid #ccc;
-              border-radius: 50%;
-              margin: 0 auto 5px;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #666">Summary</span>
-        </div>
+            "></div>
+        <span style="font-size: 12px; color: #666">Age/Balance</span>
       </div>
+      <div style="width: 100px; height: 1px; border-top: 2px dotted #ccc"></div>
+      <div style="text-align: center">
+        <div style="
+              width: 20px;
+              height: 20px;
+              border: 2px solid #ccc;
+              border-radius: 50%;
+              margin: 0 auto 5px;
+            "></div>
+        <span style="font-size: 12px; color: #666">Withdrawal</span>
+      </div>
+      <div style="width: 100px; height: 1px; border-top: 2px dotted #ccc"></div>
+      <div style="text-align: center">
+        <div style="
+              width: 20px;
+              height: 20px;
+              border: 2px solid #ccc;
+              border-radius: 50%;
+              margin: 0 auto 5px;
+            "></div>
+        <span style="font-size: 12px; color: #666">Summary</span>
+      </div>
+    </div>
 
-      <h2 style="text-align: center; font-size: 32px; margin-bottom: 30px">
-        Before you start
-      </h2>
-      <div
-        style="
+    <h2 style="text-align: center; font-size: 32px; margin-bottom: 30px">
+      Before you start
+    </h2>
+    <div style="
           font-size: 14px;
           line-height: 1.8;
           color: #333;
           background: #f9f9f9;
           padding: 30px;
           border-radius: 15px;
-        "
-      >
-        <p>
-          <strong>This is for informational purposes:</strong> Keep in mind that
-          this Illustrator is being provided for informational purposes only. It
-          is educational in nature and not designed to be a recommendation. Any
-          examples used in this tool are generic, hypothetical and for
-          illustration purposes.
-        </p>
+        ">
+      <p>
+        <strong>This is for informational purposes:</strong> Keep in mind that
+        this Illustrator is being provided for informational purposes only. It
+        is educational in nature and not designed to be a recommendation. Any
+        examples used in this tool are generic, hypothetical and for
+        illustration purposes.
+      </p>
 
-        <p>
-          <strong>You should understand your options:</strong> Prior to making
-          any investment or financial decisions, an investor should seek
-          individualized advice from personal financial, legal, tax and other
-          professionals that take into account all of the particular facts and
-          circumstances of an investor's own situation. You may want to explore
-          other investment options or try the retirement checklists, articles,
-          and calculator available here.
-        </p>
+      <p>
+        <strong>You should understand your options:</strong> Prior to making
+        any investment or financial decisions, an investor should seek
+        individualized advice from personal financial, legal, tax and other
+        professionals that take into account all of the particular facts and
+        circumstances of an investor's own situation. You may want to explore
+        other investment options or try the retirement checklists, articles,
+        and calculator available here.
+      </p>
 
-        <p>
-          <strong>How the sample withdrawal is determined:</strong> On an annual
-          basis the sample withdrawal amount is determined by the Adviser taking
-          into account various factors, such as data on real spending behavior
-          of retirees in the market, assumptions regarding future market
-          performance, past market performance, and remaining time horizon.
-        </p>
+      <p>
+        <strong>How the sample withdrawal is determined:</strong> On an annual
+        basis the sample withdrawal amount is determined by the Adviser taking
+        into account various factors, such as data on real spending behavior
+        of retirees in the market, assumptions regarding future market
+        performance, past market performance, and remaining time horizon.
+      </p>
 
-        <p>
-          <strong>Markets will fluctuate:</strong> The sample withdrawal amount
-          does not reflect changes to the Fund's net asset value (or your
-          assumed investment balance) after the beginning of the year. It is
-          important that you consider changes in the Fund's net asset value and
-          your investment balance between the annual calculations.
-        </p>
-      </div>
+      <p>
+        <strong>Markets will fluctuate:</strong> The sample withdrawal amount
+        does not reflect changes to the Fund's net asset value (or your
+        assumed investment balance) after the beginning of the year. It is
+        important that you consider changes in the Fund's net asset value and
+        your investment balance between the annual calculations.
+      </p>
+    </div>
 
-      <div
-        style="
+    <div style="
           text-align: center;
           margin-top: 40px;
           display: flex;
           justify-content: center;
           gap: 20px;
-        "
-      >
-        <button
-          id="back-to-home"
-          style="
+        ">
+      <button id="back-to-home" style="
             background: transparent;
     
             padding: 15px 30px;
@@ -1438,109 +1436,86 @@
             cursor: pointer;
             font-weight: 600;
             transition: 0.2s;
-          "
-        >
-          ← Go Back
-        </button>
+          ">
+        ← Go Back
+      </button>
 
-        <button
-          class="btn-primary"
-          style="
+      <button class="btn-primary" style="
             background: #771e7e;
             color: white;
             padding: 15px 50px;
             border-radius: 30px;
             font-weight: bold;
-          "
-        >
-          Continue with calculator
-        </button>
-      </div>
-    </section>
+          ">
+        Continue with calculator
+      </button>
+    </div>
+  </section>
 
-    <section
-      id="age-step"
-      style="
+  <section id="age-step" style="
         display: none;
         padding: 60px 40px;
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
         position: relative;
-      "
-    >
-      <div
-        style="
+      ">
+    <div style="
           display: flex;
           justify-content: center;
           align-items: center;
           margin-bottom: 80px;
           gap: 10px;
-        "
-      >
-        <div style="text-align: center">
-          <div
-            style="
+        ">
+      <div style="text-align: center">
+        <div style="
               width: 24px;
               height: 24px;
               background: #711e7e;
               border-radius: 50%;
               margin: 0 auto 5px;
-            "
-          ></div>
-          <span style="font-size: 12px; font-weight: bold; color: #111"
-            >Age/Balance</span
-          >
-        </div>
-        <div
-          style="
-            width: 100px;
-            height: 1px;
-            border-top: 2px dotted #ccc;
-            position: relative;
-            top: -10px;
-          "
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
-              width: 24px;
-              height: 24px;
-              border: 2px solid #ccc;
-              border-radius: 50%;
-              margin: 0 auto 5px;
-              background: #fff;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #666">Withdrawal</span>
-        </div>
-        <div
-          style="
-            width: 100px;
-            height: 1px;
-            border-top: 2px dotted #ccc;
-            position: relative;
-            top: -10px;
-          "
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
-              width: 24px;
-              height: 24px;
-              border: 2px solid #ccc;
-              border-radius: 50%;
-              margin: 0 auto 5px;
-              background: #fff;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #666">Summary</span>
-        </div>
+            "></div>
+        <span style="font-size: 12px; font-weight: bold; color: #111">Age/Balance</span>
       </div>
+      <div style="
+            width: 100px;
+            height: 1px;
+            border-top: 2px dotted #ccc;
+            position: relative;
+            top: -10px;
+          "></div>
+      <div style="text-align: center">
+        <div style="
+              width: 24px;
+              height: 24px;
+              border: 2px solid #ccc;
+              border-radius: 50%;
+              margin: 0 auto 5px;
+              background: #fff;
+            "></div>
+        <span style="font-size: 12px; color: #666">Withdrawal</span>
+      </div>
+      <div style="
+            width: 100px;
+            height: 1px;
+            border-top: 2px dotted #ccc;
+            position: relative;
+            top: -10px;
+          "></div>
+      <div style="text-align: center">
+        <div style="
+              width: 24px;
+              height: 24px;
+              border: 2px solid #ccc;
+              border-radius: 50%;
+              margin: 0 auto 5px;
+              background: #fff;
+            "></div>
+        <span style="font-size: 12px; color: #666">Summary</span>
+      </div>
+    </div>
 
-      <button
-        id="back-to-disclaimer"
-        style="
+    <button id="back-to-disclaimer" style="
           position: absolute;
           left: 0;
           top: 140px;
@@ -1550,25 +1525,21 @@
           color: #771e7e;
           font-weight: bold;
           font-size: 18px;
-        "
-      >
-        〈 Back
-      </button>
+        ">
+      〈 Back
+    </button>
 
-      <h2
-        style="
+    <h2 style="
           font-size: 36px;
           font-weight: 400;
           margin-bottom: 40px;
           color: #333;
-        "
-      >
-        1. How old are you?
-      </h2>
+        ">
+      1. How old are you?
+    </h2>
 
-      <div style="margin-bottom: 40px">
-        <div
-          style="
+    <div style="margin-bottom: 40px">
+      <div style="
             display: inline-block;
             border: 1px solid #ccc;
             padding: 15px 60px;
@@ -1576,44 +1547,32 @@
             color: #771e7e;
             min-width: 220px;
             font-weight: 300;
-          "
-        >
-          <span id="age-val">65</span>
-        </div>
+          ">
+        <span id="age-val">65</span>
       </div>
+    </div>
 
-      <div style="max-width: 500px; margin: 0 auto 60px">
-        <input
-          type="range"
-          id="age-toggle"
-          min="55"
-          max="100"
-          value="65"
-          style="
+    <div style="max-width: 500px; margin: 0 auto 60px">
+      <input type="range" id="age-toggle" min="55" max="100" value="65" style="
             width: 100%;
             cursor: pointer;
             accent-color: #771e7e;
             height: 6px;
-          "
-        />
-        <div
-          style="
+          " />
+      <div style="
             display: flex;
             justify-content: space-between;
             margin-top: 15px;
             color: #888;
             font-size: 14px;
             font-weight: 600;
-          "
-        >
-          <span>55 yrs</span>
-          <span>100 yrs</span>
-        </div>
+          ">
+        <span>55 yrs</span>
+        <span>100 yrs</span>
       </div>
+    </div>
 
-      <button
-        class="btn-primary"
-        style="
+    <button class="btn-primary" style="
           background: #771e7e;
           color: #ffffff;
           padding: 15px 120px;
@@ -1622,95 +1581,75 @@
           font-size: 18px;
           border: none;
           cursor: pointer;
-        "
-      >
-        Next
-      </button>
-    </section>
+        ">
+      Next
+    </button>
+  </section>
 
-    <section
-      id="balance-step"
-      style="
+  <section id="balance-step" style="
         display: none;
         padding: 60px 40px;
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
         position: relative;
-      "
-    >
-      <div
-        style="
+      ">
+    <div style="
           display: flex;
           justify-content: center;
           align-items: center;
           margin-bottom: 80px;
           gap: 10px;
-        "
-      >
-        <div style="text-align: center">
-          <div
-            style="
+        ">
+      <div style="text-align: center">
+        <div style="
               width: 24px;
               height: 24px;
               background: #711e7e;
               border-radius: 50%;
               margin: 0 auto 5px;
-            "
-          ></div>
-          <span style="font-size: 12px; font-weight: bold; color: #111"
-            >Age/Balance</span
-          >
-        </div>
-        <div
-          style="
-            width: 100px;
-            height: 1px;
-            border-top: 2px dotted #ccc;
-            position: relative;
-            top: -10px;
-          "
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
-              width: 24px;
-              height: 24px;
-              border: 2px solid #ccc;
-              border-radius: 50%;
-              margin: 0 auto 5px;
-              background: #fff;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #666">Withdrawal</span>
-        </div>
-        <div
-          style="
-            width: 100px;
-            height: 1px;
-            border-top: 2px dotted #ccc;
-            position: relative;
-            top: -10px;
-          "
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
-              width: 24px;
-              height: 24px;
-              border: 2px solid #ccc;
-              border-radius: 50%;
-              margin: 0 auto 5px;
-              background: #fff;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #666">Summary</span>
-        </div>
+            "></div>
+        <span style="font-size: 12px; font-weight: bold; color: #111">Age/Balance</span>
       </div>
+      <div style="
+            width: 100px;
+            height: 1px;
+            border-top: 2px dotted #ccc;
+            position: relative;
+            top: -10px;
+          "></div>
+      <div style="text-align: center">
+        <div style="
+              width: 24px;
+              height: 24px;
+              border: 2px solid #ccc;
+              border-radius: 50%;
+              margin: 0 auto 5px;
+              background: #fff;
+            "></div>
+        <span style="font-size: 12px; color: #666">Withdrawal</span>
+      </div>
+      <div style="
+            width: 100px;
+            height: 1px;
+            border-top: 2px dotted #ccc;
+            position: relative;
+            top: -10px;
+          "></div>
+      <div style="text-align: center">
+        <div style="
+              width: 24px;
+              height: 24px;
+              border: 2px solid #ccc;
+              border-radius: 50%;
+              margin: 0 auto 5px;
+              background: #fff;
+            "></div>
+        <span style="font-size: 12px; color: #666">Summary</span>
+      </div>
+    </div>
 
-      <button
-        id="back-to-age"
-        style="
+    <button id="back-to-age" style="
           position: absolute;
           left: 0;
           top: 140px;
@@ -1720,38 +1659,30 @@
           color: #711e7e;
           font-weight: bold;
           font-size: 18px;
-        "
-      >
-        〈 Back
-      </button>
+        ">
+      〈 Back
+    </button>
 
-      <h2
-        style="
+    <h2 style="
           font-size: 32px;
           font-weight: 400;
           margin-bottom: 10px;
           color: #333;
-        "
-      >
-        2. What is your Smart Retirement account balance?
-        <span style="font-size: 18px; color: #666; vertical-align: middle"
-          >ⓘ</span
-        >
-      </h2>
-      <p
-        style="
+        ">
+      2. What is your Smart Retirement account balance?
+      <span style="font-size: 18px; color: #666; vertical-align: middle">ⓘ</span>
+    </h2>
+    <p style="
           color: #711e7e;
           cursor: pointer;
           font-size: 14px;
           margin-bottom: 40px;
-        "
-      >
-        Help me find my balance
-      </p>
+        ">
+      Help me find my balance
+    </p>
 
-      <div style="margin-bottom: 40px">
-        <div
-          style="
+    <div style="margin-bottom: 40px">
+      <div style="
             display: inline-block;
             border: 1px solid #ccc;
             padding: 15px 40px;
@@ -1759,33 +1690,21 @@
             color: #771e7e;
             min-width: 450px;
             font-weight: 300;
-          "
-        >
-          <span id="balance-val">PKR 500,000</span>
-        </div>
+          ">
+        <span id="balance-val">PKR 500,000</span>
       </div>
+    </div>
 
-      <div style="max-width: 600px; margin: 0 auto 60px">
-        <input
-          type="range"
-          id="balance-toggle"
-          min="0"
-          max="10000000"
-          step="10000"
-          value="500000"
-          style="
+    <div style="max-width: 600px; margin: 0 auto 60px">
+      <input type="range" id="balance-toggle" min="0" max="10000000" step="10000" value="500000" style="
             width: 100%;
             cursor: pointer;
             accent-color: #771e7e;
             height: 6px;
-          "
-        />
-      </div>
+          " />
+    </div>
 
-      <button
-        id="submit-balance"
-        class="btn-primary"
-        style="
+    <button id="submit-balance" class="btn-primary" style="
           background: #771e7e;
           color: #ffffff;
           padding: 15px 120px;
@@ -1794,93 +1713,73 @@
           font-size: 18px;
           border: none;
           cursor: pointer;
-        "
-      >
-        Submit
-      </button>
-    </section>
+        ">
+      Submit
+    </button>
+  </section>
 
-    <section
-      id="withdrawal-step"
-      style="
+  <section id="withdrawal-step" style="
         display: none;
         padding: 40px;
         max-width: 1000px;
         margin: 0 auto;
         position: relative;
-      "
-    >
-      <div
-        style="
+      ">
+    <div style="
           display: flex;
           justify-content: center;
           align-items: center;
           margin-bottom: 40px;
           gap: 10px;
-        "
-      >
-        <div style="text-align: center">
-          <div
-            style="
+        ">
+      <div style="text-align: center">
+        <div style="
               width: 24px;
               height: 24px;
               background: #711e7e;
               border-radius: 50%;
               margin: 0 auto 5px;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #111">Age/Balance</span>
-        </div>
-        <div
-          style="
+            "></div>
+        <span style="font-size: 12px; color: #111">Age/Balance</span>
+      </div>
+      <div style="
             width: 100px;
             height: 1px;
             border-top: 2px solid #711e7e;
             position: relative;
             top: -10px;
-          "
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
+          "></div>
+      <div style="text-align: center">
+        <div style="
               width: 24px;
               height: 24px;
               background: #711e7e;
               border-radius: 50%;
               margin: 0 auto 5px;
-            "
-          ></div>
-          <span style="font-size: 12px; font-weight: bold; color: #111"
-            >Withdrawal</span
-          >
-        </div>
-        <div
-          style="
+            "></div>
+        <span style="font-size: 12px; font-weight: bold; color: #111">Withdrawal</span>
+      </div>
+      <div style="
             width: 100px;
             height: 1px;
             border-top: 2px dotted #ccc;
             position: relative;
             top: -10px;
-          "
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
+          "></div>
+      <div style="text-align: center">
+        <div style="
               width: 24px;
               height: 24px;
               border: 2px solid #ccc;
               border-radius: 50%;
               margin: 0 auto 5px;
               background: #fff;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #666">Summary</span>
-        </div>
+            "></div>
+        <span style="font-size: 12px; color: #666">Summary</span>
       </div>
+    </div>
 
-      <button
-        id="back-to-balance"
-        style="
+    <button id="back-to-balance" style="
           position: absolute;
           left: 0;
           top: 100px;
@@ -1890,40 +1789,32 @@
           color: #711e7e;
           font-weight: bold;
           font-size: 18px;
-        "
-      >
-        〈 Back
-      </button>
+        ">
+      〈 Back
+    </button>
 
-      <div style="text-align: center; margin-bottom: 30px">
-        <p style="font-size: 14px; color: #666">
-          Based on an age of <span id="res-age">65</span> with
-          <span id="res-bal">PKR500,000</span> invested in Al Meezan Retirement
-          Fund
-        </p>
-        <h2 style="font-size: 32px; font-weight: 400; margin-top: 20px">
-          This year's annual spending allowance is
-          <span
-            style="color: #00695c; border-bottom: 2px solid #00695c"
-            id="annual-allowance"
-            >PKR26,125</span
-          >
-          *
-        </h2>
-      </div>
+    <div style="text-align: center; margin-bottom: 30px">
+      <p style="font-size: 14px; color: #666">
+        Based on an age of <span id="res-age">65</span> with
+        <span id="res-bal">PKR500,000</span> invested in Al Meezan Retirement
+        Fund
+      </p>
+      <h2 style="font-size: 32px; font-weight: 400; margin-top: 20px">
+        This year's annual spending allowance is
+        <span style="color: #00695c; border-bottom: 2px solid #00695c" id="annual-allowance">PKR26,125</span>
+        *
+      </h2>
+    </div>
 
-      <div
-        style="
+    <div style="
           display: flex;
           flex-direction: column;
           gap: 30px;
           align-items: center;
           background-color: #f9f9f9;
           padding: 40px;
-        "
-      >
-        <div
-          style="
+        ">
+      <div style="
             background: #fff;
             padding: 10px;
             border-radius: 15px;
@@ -1931,16 +1822,10 @@
             max-width: 1000px;
             border: 1px solid #ddd;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-          "
-        >
-          <img
-            src="expectedsaving.png"
-            alt="Expected Saving"
-            style="width: 100%; height: 100%; object-fit: contain"
-          />
-        </div>
-        <div
-          style="
+          ">
+        <img src="expectedsaving.png" alt="Expected Saving" style="width: 100%; height: 100%; object-fit: contain" />
+      </div>
+      <div style="
             background: #fff;
             padding: 30px;
             border-radius: 15px;
@@ -1948,20 +1833,14 @@
             max-width: 1000px;
             border: 1px solid #ddd;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-          "
-        >
-          <img
-            src="Portfoliovswithdrawal.png"
-            alt="Portfolio vs Withdrawal"
-            style="width: 100%; height: 100%; object-fit: contain"
-          />
-        </div>
+          ">
+        <img src="Portfoliovswithdrawal.png" alt="Portfolio vs Withdrawal"
+          style="width: 100%; height: 100%; object-fit: contain" />
       </div>
+    </div>
 
-      <div style="display: flex; justify-content: center; margin-top: 40px">
-        <button
-          id="submit-withdrawal"
-          style="
+    <div style="display: flex; justify-content: center; margin-top: 40px">
+      <button id="submit-withdrawal" style="
             background: #711e7e;
             color: white;
             padding: 15px 50px;
@@ -1970,91 +1849,71 @@
             cursor: pointer;
             border: none;
             font-size: 16px;
-          "
-        >
-          Continue to Summary
-        </button>
-      </div>
-    </section>
+          ">
+        Continue to Summary
+      </button>
+    </div>
+  </section>
 
-    <section
-      id="summary-step"
-      class="summary-container"
-      style="display: none; padding: 40px; max-width: 1200px; margin: 0 auto"
-    >
-      <!-- Step Indicator -->
+  <section id="summary-step" class="summary-container"
+    style="display: none; padding: 40px; max-width: 1200px; margin: 0 auto">
+    <!-- Step Indicator -->
 
-      <div
-        style="
+    <div style="
           display: flex;
           justify-content: center;
           align-items: center;
           margin-bottom: 40px;
           gap: 10px;
-        "
-      >
-        <div style="text-align: center">
-          <div
-            style="
+        ">
+      <div style="text-align: center">
+        <div style="
               width: 24px;
               height: 24px;
               background: #711e7e;
               border-radius: 50%;
               margin: 0 auto 5px;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #111">Age/Balance</span>
-        </div>
-        <div
-          style="
+            "></div>
+        <span style="font-size: 12px; color: #111">Age/Balance</span>
+      </div>
+      <div style="
             width: 100px;
             height: 1px;
             border-top: 2px solid #711e7e;
             position: relative;
             top: -10px;
-          "
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
+          "></div>
+      <div style="text-align: center">
+        <div style="
               width: 24px;
               height: 24px;
               background: #711e7e;
               border-radius: 50%;
               margin: 0 auto 5px;
-            "
-          ></div>
-          <span style="font-size: 12px; color: #111">Withdrawal</span>
-        </div>
-        <div
-          style="
+            "></div>
+        <span style="font-size: 12px; color: #111">Withdrawal</span>
+      </div>
+      <div style="
             width: 100px;
             height: 1px;
             border-top: 2px solid #711e7e;
             position: relative;
             top: -10px;
-          "
-        ></div>
-        <div style="text-align: center">
-          <div
-            style="
+          "></div>
+      <div style="text-align: center">
+        <div style="
               width: 24px;
               height: 24px;
 
               border-radius: 50%;
               margin: 0 auto 5px;
               background: #771e7e;
-            "
-          ></div>
-          <span style="font-size: 12px; font-weight: bold; color: #000000"
-            >Summary</span
-          >
-        </div>
+            "></div>
+        <span style="font-size: 12px; font-weight: bold; color: #000000">Summary</span>
       </div>
+    </div>
 
-      <button
-        id="back-to-withdrawal"
-        style="
+    <button id="back-to-withdrawal" style="
           position: absolute;
           left: 1;
           top: 300px;
@@ -2064,82 +1923,75 @@
           color: #711e7e;
           font-weight: bold;
           font-size: 18px;
-        "
-      >
-        〈 Back
-      </button>
-      <br /><br /><br /><br />
-      <div style="display: flex; gap: 40px; flex-wrap: wrap">
+        ">
+      〈 Back
+    </button>
+    <br /><br /><br /><br />
+    <div style="display: flex; gap: 40px; flex-wrap: wrap">
 
 
-        <!-- LEFT CONTENT -->
+      <!-- LEFT CONTENT -->
 
-        
-        <div class="summary-main" style="flex: 2; min-width: 300px">
-          <div class="summary-header">
-            <h2 style="font-size: 36px; font-weight: 400">The Summary</h2>
+
+      <div class="summary-main" style="flex: 2; min-width: 300px">
+        <div class="summary-header">
+          <h2 style="font-size: 36px; font-weight: 400">The Summary</h2>
+        </div>
+
+        <span style="font-size: 30px; font-weight: bold; color: #711e71">Al meezan Smart Retirement Income Fund</span>
+        <p style="font-size: 14px; color: #666; margin-bottom: 30px">
+          Selected fund
+        </p>
+
+        <!-- STATS -->
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-value color-green">PKR100,000</div>
+            <div class="stat-label">Account balance / Initial investment</div>
           </div>
 
-          <span style="font-size: 30px; font-weight: bold; color: #711e71"
-            >Al meezan Smart Retirement Income Fund</span
-          >
-          <p style="font-size: 14px; color: #666; margin-bottom: 30px">
-            Selected fund
-          </p>
-
-          <!-- STATS -->
-          <div class="stats-row">
-            <div class="stat-item">
-              <div class="stat-value color-green">PKR100,000</div>
-              <div class="stat-label">Account balance / Initial investment</div>
-            </div>
-
-            <div class="stat-item">
-              <div class="stat-value color-purple">PKR5,225*</div>
-              <div class="stat-label">2026 withdrawal amount</div>
-            </div>
-
-            <div class="stat-item">
-              <div class="stat-value color-blue">PKR94,775</div>
-              <div class="stat-label">
-                Estimated remaining balance after 2026 withdrawal
-              </div>
-            </div>
+          <div class="stat-item">
+            <div class="stat-value color-purple">PKR5,225*</div>
+            <div class="stat-label">2026 withdrawal amount</div>
           </div>
 
-          <p class="disclaimer-text">
-            *This withdrawal amount assumes you have not withdrawn funds this
-            year
-          </p>
+          <div class="stat-item">
+            <div class="stat-value color-blue">PKR94,775</div>
+            <div class="stat-label">
+              Estimated remaining balance after 2026 withdrawal
+            </div>
+          </div>
+        </div>
 
-          <p
-            style="
+        <p class="disclaimer-text">
+          *This withdrawal amount assumes you have not withdrawn funds this
+          year
+        </p>
+
+        <p style="
               font-size: 14px;
               color: #555;
               margin-top: 20px;
               max-width: 700px;
-            "
-          >
-            Please review the information above. Once you are ready to either
-            make a withdrawal or invest in our fund, please refer to the “Next
-            Steps” on this screen for instructions on how to proceed.
-          </p>
+            ">
+          Please review the information above. Once you are ready to either
+          make a withdrawal or invest in our fund, please refer to the “Next
+          Steps” on this screen for instructions on how to proceed.
+        </p>
 
-          <p
-            style="
+        <p style="
               margin-top: 30px;
               font-size: 14px;
               color: #711e7e;
               cursor: pointer;
-            "
-          >
-            ⓘ Disclosure
-          </p>
+            ">
+          ⓘ Disclosure
+        </p>
 
 
-          <div class="summary-actions" style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
-  
-  <button style="
+        <div class="summary-actions" style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+
+          <button style="
     display: flex;
     align-items: center;
     padding: 12px 24px;
@@ -2151,10 +2003,10 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s;">
-    <span style="margin-right: 8px;">⬇</span> Download PDF
-  </button>
+            <span style="margin-right: 8px;">⬇</span> Download PDF
+          </button>
 
-  <button style="
+          <button style="
     display: flex;
     align-items: center;
     padding: 12px 24px;
@@ -2166,218 +2018,221 @@
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s;">
-    <span style="margin-right: 8px;">✉</span> Email PDF
-  </button>
-  
-</div>
-        </div>
+            <span style="margin-right: 8px;">✉</span> Email PDF
+          </button>
 
-        
-
-        <!-- RIGHT SIDEBAR -->
-        <aside class="summary-sidebar">
-          <h3 class="next-steps-title">Next steps</h3>
-
-          <div class="sidebar-section">
-            <h4>Not yet invested?</h4>
-            <ul class="sidebar-list">
-              <li>
-                <span>1.</span> Print & save this information for your records
-              </li>
-              <li>
-                <span>2.</span> Log on to your employer's benefits website or
-                check your most recent statement
-              </li>
-              <li>
-                <span>3.</span> Call your employer’s benefits representative to
-                confirm SmartRetirement is available
-              </li>
-            </ul>
-          </div>
-
-          <div class="sidebar-section">
-            <h4>Determined your withdrawal amount?</h4>
-            <ul class="sidebar-list">
-              <li>
-                <span>1.</span> Confirm the withdrawal amount and frequency
-              </li>
-              <li>
-                <span>2.</span> Log on to your employer's benefits website
-              </li>
-              <li>
-                <span>3.</span> Call your benefits representative to obtain
-                funds
-              </li>
-              <li>
-                <span>4.</span> Have ready:
-                <ul class="bullet-list">
-    <li>Account number</li>
-    <li>Withdrawal amount</li>
-    <li>Home address</li>
-    <li>Bank account and routing number</li>
-  </ul>
-              </li>
-            </ul>
-          </div>
-        </aside>
-
-
-
-             
-
-      
-
-    </section>
-    <div class="investment-banner">
-  <div class="banner-content">
-    <span class="key-icon">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
-      </svg>
-    </span>
- <!-- /* banner */ -->
-    <p class="banner-text">
-      Open your <span>'Investment Account'</span> wherever you are, whenever you want!
-    </p>
-  </div>
-<br></br>
-<a href="https://members.almeezangroup.com/MeezanAccountOpening" 
-   class="cta-button" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   Open Your Digital Account
-</a></div>
-      </div>
-
-    <footer class="main-footer">
-      <div class="footer-top-bar">
-        <div class="contact-item">
-          <div class="icon">📞</div>
-          <div>
-            <strong>Toll Free Number</strong><br />
-            0800 - 42525 (HALAL)<br />
-            <span>for free investment advice</span>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon">💬</div>
-          <div>
-            <strong>SMS "invest" to 6655</strong><br />
-            <span>for our investment advisor to connect with you</span>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon">📍</div>
-          <div>
-            <strong>Find your nearest branch</strong><br />
-            <span>and visit us for a quick investment discussion</span>
-          </div>
         </div>
       </div>
 
-      <div class="footer-content">
-        <div class="links-grid">
-          <div class="link-column">
-            <h3>Why Al Meezan</h3>
-            <ul>
-              <li>Company Overview</li>
-              <li>Meet Our Leadership</li>
-              <li>Sponsors</li>
-              <li>Our Service Partners</li>
-              <li>Shariah Compliance</li>
-              <li>Careers</li>
-            </ul>
-          </div>
-          <div class="link-column">
-            <h3>Customer Services</h3>
-            <ul>
-              <li>Meezan Funds Online</li>
-              <li>Investing with Us</li>
-              <li>Value Added Services</li>
-              <li>Get in Touch</li>
-              <li>Branch Locator</li>
-              <li>Complaint & Feedback</li>
-            </ul>
-          </div>
-          <div class="link-column">
-            <h3>Downloads</h3>
-            <ul>
-              <li>Application Forms</li>
-              <li>Constitutive Documents</li>
-              <li>Financial Statements</li>
-              <li>Fund Manager Reports</li>
-              <li>GIPS Compliant Reports</li>
-              <li>Miscellaneous</li>
-            </ul>
-          </div>
-          <div class="link-column">
-            <h3>Investor Education</h3>
-            <ul>
-              <li>Mutual Funds Basics</li>
-              <li>Shariah Methodology</li>
-              <li>Magazine and Articles</li>
-              <li>Tutorials and Videos</li>
-              <li>Tax Credit</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
+
+
+      <!-- RIGHT SIDEBAR -->
+      <aside class="summary-sidebar">
+        <h3 class="next-steps-title">Next steps</h3>
+
+        <div class="sidebar-section">
+          <h4>Not yet invested?</h4>
+          <ul class="sidebar-list">
+            <li>
+              <span>1.</span> Print & save this information for your records
+            </li>
+            <li>
+              <span>2.</span> Log on to your employer's benefits website or
+              check your most recent statement
+            </li>
+            <li>
+              <span>3.</span> Call your employer’s benefits representative to
+              confirm SmartRetirement is available
+            </li>
+          </ul>
         </div>
 
-        <div class="footer-bottom-flex">
-          <div class="logo2">
-            <img src="logo2.svg" alt="Al Meezan Logo" class="footer-logo" />
-            <div class="complaint-link">Complaint ➔</div>
-            <p>In case of complaint contact your Relationship Manager...</p>
-            <div class="social-icons"></div>
-          </div>
-
-          <div class="contact-info">
-            <h3>Contact Us</h3>
-            <p><strong>Email</strong><br />info@almeezangroup.com</p>
-            <p><strong>Toll Free Number</strong><br />0800 - 42525 (HALAL)</p>
-            <p><strong>SMS</strong><br />SMS "invest" to 6655</p>
-          </div>
-
-          <div class="call-form-card">
-            <h3>Let us call you</h3>
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Location" />
-            <input type="text" value="+92-" />
-            <button class="btn-purple">
-              Click to Get Free Investment Advice
-            </button>
-          </div>
+        <div class="sidebar-section">
+          <h4>Determined your withdrawal amount?</h4>
+          <ul class="sidebar-list">
+            <li>
+              <span>1.</span> Confirm the withdrawal amount and frequency
+            </li>
+            <li>
+              <span>2.</span> Log on to your employer's benefits website
+            </li>
+            <li>
+              <span>3.</span> Call your benefits representative to obtain
+              funds
+            </li>
+            <li>
+              <span>4.</span> Have ready:
+              <ul class="bullet-list">
+                <li>Account number</li>
+                <li>Withdrawal amount</li>
+                <li>Home address</li>
+                <li>Bank account and routing number</li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </div>
+      </aside>
 
-      <div class="footer-bottom-bar">
-        <p>Design and Developed by HAMZA HASHMI</p>
-        <p>© Copyright 2026, Al Meezan Investments. Last updated: 15-01-2026</p>
-        <div><span>Sitemap</span> | <span>Privacy Policy</span></div>
-      </div>
-    </footer>
 
-    <div class="floating-contact">
-      <div class="float-icon wa-bg">WA</div>
-      <div class="float-icon msg-bg">✉</div>
 
-      <!-- open your account -->
 
-<div class="fab-container" onclick="window.open('https://members.almeezangroup.com/MeezanAccountOpening', '_blank');">
-    <div class="fab-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
+
+
+
+  </section>
+  <div class="investment-banner">
+    <div class="banner-content">
+      <span class="key-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
         </svg>
+      </span>
+      <!-- /* banner */ -->
+      <p class="banner-text">
+        Open your <span>'Investment Account'</span> wherever you are, whenever you want!
+      </p>
     </div>
-    <span class="fab-text">Open Your Account</span>
-</div>
+    <br></br>
+    <a href="https://members.almeezangroup.com/MeezanAccountOpening" class="cta-button" target="_blank"
+      rel="noopener noreferrer">
+      Open Your Digital Account
+    </a>
+  </div>
+  </div>
 
-<style>
-    .fab-container {
+  <footer class="main-footer">
+    <div class="footer-top-bar">
+      <div class="contact-item">
+        <div class="icon">📞</div>
+        <div>
+          <strong>Toll Free Number</strong><br />
+          0800 - 42525 (HALAL)<br />
+          <span>for free investment advice</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">💬</div>
+        <div>
+          <strong>SMS "invest" to 6655</strong><br />
+          <span>for our investment advisor to connect with you</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">📍</div>
+        <div>
+          <strong>Find your nearest branch</strong><br />
+          <span>and visit us for a quick investment discussion</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-content">
+      <div class="links-grid">
+        <div class="link-column">
+          <h3>Why Al Meezan</h3>
+          <ul>
+            <li>Company Overview</li>
+            <li>Meet Our Leadership</li>
+            <li>Sponsors</li>
+            <li>Our Service Partners</li>
+            <li>Shariah Compliance</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="link-column">
+          <h3>Customer Services</h3>
+          <ul>
+            <li>Meezan Funds Online</li>
+            <li>Investing with Us</li>
+            <li>Value Added Services</li>
+            <li>Get in Touch</li>
+            <li>Branch Locator</li>
+            <li>Complaint & Feedback</li>
+          </ul>
+        </div>
+        <div class="link-column">
+          <h3>Downloads</h3>
+          <ul>
+            <li>Application Forms</li>
+            <li>Constitutive Documents</li>
+            <li>Financial Statements</li>
+            <li>Fund Manager Reports</li>
+            <li>GIPS Compliant Reports</li>
+            <li>Miscellaneous</li>
+          </ul>
+        </div>
+        <div class="link-column">
+          <h3>Investor Education</h3>
+          <ul>
+            <li>Mutual Funds Basics</li>
+            <li>Shariah Methodology</li>
+            <li>Magazine and Articles</li>
+            <li>Tutorials and Videos</li>
+            <li>Tax Credit</li>
+            <li>FAQs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-flex">
+        <div class="logo2">
+          <img src="logo2.svg" alt="Al Meezan Logo" class="footer-logo" />
+          <div class="complaint-link">Complaint ➔</div>
+          <p>In case of complaint contact your Relationship Manager...</p>
+          <div class="social-icons"></div>
+        </div>
+
+        <div class="contact-info">
+          <h3>Contact Us</h3>
+          <p><strong>Email</strong><br />info@almeezangroup.com</p>
+          <p><strong>Toll Free Number</strong><br />0800 - 42525 (HALAL)</p>
+          <p><strong>SMS</strong><br />SMS "invest" to 6655</p>
+        </div>
+
+        <div class="call-form-card">
+          <h3>Let us call you</h3>
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Location" />
+          <input type="text" value="+92-" />
+          <button class="btn-purple">
+            Click to Get Free Investment Advice
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <p>Design and Developed by HAMZA HASHMI</p>
+      <p>© Copyright 2026, Al Meezan Investments. Last updated: 15-01-2026</p>
+      <div><span>Sitemap</span> | <span>Privacy Policy</span></div>
+    </div>
+  </footer>
+
+  <div class="floating-contact">
+    <div class="float-icon wa-bg">WA</div>
+    <div class="float-icon msg-bg">✉</div>
+
+    <!-- open your account -->
+
+    <div class="fab-container"
+      onclick="window.open('https://members.almeezangroup.com/MeezanAccountOpening', '_blank');">
+      <div class="fab-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </div>
+      <span class="fab-text">Open Your Account</span>
+    </div>
+
+    <style>
+      .fab-container {
         position: fixed;
         right: 24px;
-        bottom: 170px; /* Adjusted to sit near bottom */
+        bottom: 170px;
+        /* Adjusted to sit near bottom */
         z-index: 9999;
         background: linear-gradient(135deg, #70297d 0%, #5a185a 100%);
         color: #ffffff;
@@ -2392,20 +2247,20 @@
         box-shadow: 0 10px 20px rgba(112, 41, 125, 0.3);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         overflow: hidden;
-        font-family: 'Segoe UI', Roboto, sans-serif;
+        font-family: 'poppins', Roboto, sans-serif;
         box-sizing: border-box;
-    }
+      }
 
-    /* Icon stays centered until hover */
-    .fab-icon {
+      /* Icon stays centered until hover */
+      .fab-icon {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-    }
+      }
 
-    /* Text is hidden by default */
-    .fab-text {
+      /* Text is hidden by default */
+      .fab-text {
         max-width: 0;
         opacity: 0;
         white-space: nowrap;
@@ -2414,25 +2269,26 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: all 0.4s ease;
-    }
+      }
 
-    /* Hover Effects */
-    .fab-container:hover {
+      /* Hover Effects */
+      .fab-container:hover {
         padding: 12px 24px;
         gap: 10px;
         transform: scale(1.05) translateY(-5px);
         box-shadow: 0 15px 25px rgba(112, 41, 125, 0.4);
-    }
+      }
 
-    .fab-container:hover .fab-text {
-        max-width: 200px; /* Allow text to slide out */
+      .fab-container:hover .fab-text {
+        max-width: 200px;
+        /* Allow text to slide out */
         opacity: 1;
-    }
-</style>
+      }
+    </style>
 
 
 
-<!-- JAVA SCRIPT -->
+    <!-- JAVA SCRIPT -->
 
 
 
@@ -2566,28 +2422,27 @@
           );
         }
 
-       // Modal Logic (Global)
-window.openModal = function (title, content) {
-  document.getElementById("modalTitle").innerText = title;
-  document.getElementById("modalContent").innerText = content;
-  document.getElementById("modalOverlay").style.display = "flex";
-};
+        // Modal Logic (Global)
+       window.openModal = function (title, content) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalContent").innerHTML = content; // ✅ FIX
+    document.getElementById("modalOverlay").style.display = "flex";
+  };
 
-window.closeModal = function () {
-  document.getElementById("modalOverlay").style.display = "none";
-};
+  window.closeModal = function () {
+    document.getElementById("modalOverlay").style.display = "none";
+  };
 
-// Close modal when clicking on overlay (screen)
-document.getElementById("modalOverlay").addEventListener("click", function (e) {
-  if (e.target === this) {
-    closeModal();
-  }
-});
+  // Close modal when clicking outside modal box
+  document.getElementById("modalOverlay").addEventListener("click", function (e) {      
+    if (e.target === this) {
+      closeModal();
+    }
+  });
 
 
-        
       });
     </script>
-  </body>
-</html>
+</body>
 
+</html>
